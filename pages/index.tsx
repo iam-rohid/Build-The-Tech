@@ -1,16 +1,14 @@
 import React from "react";
 import Head from "next/head";
 import HeroSection from "../src/components/home/sections/hero";
+import { siteDescription, siteName } from "../src/data/app-data";
 
 const HomePage = () => {
   return (
     <>
       <Head>
-        <title>Build the tech</title>
-        <meta
-          name="description"
-          content="Let’s build some Amazing Products Together!"
-        />
+        <title>{siteName}</title>
+        <meta name="description" content={siteDescription} />
       </Head>
       <HeroSection />
     </>

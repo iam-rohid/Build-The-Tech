@@ -1,4 +1,4 @@
-export const siteName = "Build the tech";
+export const siteName = "Build The Tech";
 export const siteTitle = "Let’s build some Amazing Products Together!";
 export const siteDescription =
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since";

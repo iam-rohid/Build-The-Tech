@@ -1,4 +1,4 @@
-import AnimatedButton from "./AnimatedButton";
+import OutlineButton from "./OutLineButton";
 import PrimaryButton from "./PrimaryButton";
 
 export interface iBtnProp {
@@ -6,13 +6,5 @@ export interface iBtnProp {
   className?: string;
   onClick?: () => void;
   disabled?: boolean;
-  animation?: iBtnAniation | false;
 }
-
-export interface iBtnAniation {
-  hoverScale?: false | number;
-  tapScale?: false | number;
-  duration?: number;
-}
-
-export { AnimatedButton, PrimaryButton };
+export { PrimaryButton, OutlineButton };

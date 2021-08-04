@@ -1,5 +1,6 @@
 import "tailwindcss/tailwind.css";
 import "../src/styles/globals.scss";
+
 import { AnimatePresence } from "framer-motion";
 import SplashScreen from "../src/components/splash-screens";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MenuItem from "./MenuItem";
 import { useRouter } from "next/router";
-import { menu } from "../../../data/navigation";
+import { menu } from "../../data/navigation";
 
 const Menu = () => {
   const [currentRoute, setCurrentRoute] = useState<string | null>(null);

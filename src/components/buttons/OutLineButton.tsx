@@ -1,7 +1,7 @@
 import React from "react";
 import { iBtnProp } from ".";
 
-const PrimaryButton: React.FC<iBtnProp> = ({
+const OutlineButton: React.FC<iBtnProp> = ({
   className,
   children,
   disabled,
@@ -10,7 +10,7 @@ const PrimaryButton: React.FC<iBtnProp> = ({
   return (
     <button
       disabled={disabled}
-      className={`btn primary-btn ${className}`}
+      className={`btn outline-btn ${className}`}
       onClick={onClick}
     >
       {children}
@@ -18,4 +18,4 @@ const PrimaryButton: React.FC<iBtnProp> = ({
   );
 };
 
-export default PrimaryButton;
+export default OutlineButton;

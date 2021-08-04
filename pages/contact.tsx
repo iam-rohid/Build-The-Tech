@@ -1,7 +1,17 @@
+import Head from "next/head";
 import React from "react";
+import { siteName } from "../src/data/app-data";
 
 const ContactPage = () => {
-  return <div>Contact page</div>;
+  return (
+    <>
+      <Head>
+        <title>Contanct - {siteName}</title>
+        <meta name="description" content={`Contact page for ${siteName}`} />
+      </Head>
+      Contact page
+    </>
+  );
 };
 
 export default ContactPage;
