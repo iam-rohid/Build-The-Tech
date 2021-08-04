@@ -1,5 +1,6 @@
 .hero-section {
-  @apply w-full h-screen -mt-24 pt-24;
+  @apply w-full h-screen pt-24;
+  margin-top: -104px;
   .hero-wrapper {
     @apply container w-full px-4 py-10 flex h-full md:space-x-8 md:flex-row justify-center flex-col-reverse;
     .left-wrapper {
