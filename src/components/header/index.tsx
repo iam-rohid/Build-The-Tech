@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { PrimaryButton, AnimatedButton } from "../../buttons";
+import { OutlineButton } from "../buttons";
 import { motion } from "framer-motion";
 import Menu from "./Menu";
 
@@ -31,13 +31,13 @@ const stragger = {
   },
 };
 
-const MainHeader = () => {
+const Header = () => {
   return (
     <motion.nav className="nav-bar" initial="initial" animate="animate">
       <motion.div variants={stragger} className="nav-wrapper relative">
         <motion.div variants={animateIn}>
-          <AnimatedButton>
-            <Link href="/" passHref>
+          <Link href="/" passHref>
+            <a>
               <Image
                 src="/svg/icon.svg"
                 alt="Build The Tech icon"
@@ -45,18 +45,18 @@ const MainHeader = () => {
                 width="48px"
                 height="48px"
               />
-            </Link>
-          </AnimatedButton>
+            </a>
+          </Link>
         </motion.div>
         <Menu />
         <motion.div variants={animateIn}>
-          <PrimaryButton>
+          <button className="btn outline primary normal">
             <p>Let&apos;s talk</p>
-          </PrimaryButton>
+          </button>
         </motion.div>
       </motion.div>
     </motion.nav>
   );
 };
 
-export default MainHeader;
+export default Header;

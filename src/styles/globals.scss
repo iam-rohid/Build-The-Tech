@@ -1,31 +1,74 @@
 @layer components {
   .nav-bar {
-    @apply w-full px-8 h-24 sticky top-0 z-50;
+    @apply w-full h-24 sticky top-0 z-50;
     .nav-wrapper {
-      @apply container h-full flex flex-row justify-between items-center;
-    }
-  }
-
-  .landing-section {
-    @apply w-full h-screen -mt-24 pt-24;
-    .landing-wrapper {
-      @apply container w-full px-4 py-10 flex h-full md:space-x-8 md:flex-row justify-center flex-col-reverse;
-      .left-wrapper {
-        @apply flex-1 w-full h-full justify-center flex flex-col text-center md:text-left items-center md:items-start;
-        .title {
-          @apply 2xl:text-7xl xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-black leading-tight text-gray-800;
-        }
-        .description {
-          @apply text-gray-700 md:leading-loose mb-10 xl:text-lg md:text-lg text-base leading-normal;
-        }
-      }
-      .right-wrapper {
-        @apply flex-1 w-full md:h-full h-40 mb-10 md:mb-0 self-center flex flex-col justify-center p-0 xl:px-20 lg:px-10 px-6;
-      }
+      @apply container px-4 h-full flex flex-row justify-between items-center;
     }
   }
 
   .btn {
-    @apply bg-gray-900 text-white whitespace-nowrap rounded-xl px-10 py-3.5 font-medium;
+    @apply whitespace-nowrap rounded-full font-medium transition duration-300;
+    &.outline {
+      &.primary {
+        @apply hover:bg-primary-500 border-2 border-primary-500 text-primary-500 hover:text-white bg-transparent;
+      }
+      &.secondary {
+        @apply hover:bg-gray-800 border-2 border-gray-800 text-gray-800 hover:text-white bg-transparent;
+      }
+    }
+
+    &.primary {
+      @apply bg-primary-500 text-white;
+    }
+    &.secondary {
+      @apply bg-gray-800 text-gray-100;
+    }
+    &.normal {
+      @apply px-6 py-2;
+    }
+    &.big {
+      @apply px-10 py-4;
+    }
+  }
+
+  @import "./home.scss";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.dark {
+  color-scheme: dark;
+}
+.light {
+  color-scheme: light;
+}
+
+.cta-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  transition: all ease-in-out 300ms;
+  p {
+    margin-left: -20px;
+    transition: all ease-in-out 300ms;
+  }
+  .arrow {
+    margin-left: -40px;
+    opacity: 0;
+    transition: all ease-in-out 300ms;
+  }
+  &:hover {
+    width: 220px;
+    p {
+      margin-left: 0;
+    }
+    .arrow {
+      margin-left: 1rem;
+      opacity: 1;
+    }
   }
 }
