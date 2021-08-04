@@ -35,8 +35,8 @@ const LandingSection = () => {
       initial="initial"
       animate="animate"
     >
-      <motion.div variants={stragger} className="landing-wrapper">
-        <div className="left-wrapper">
+      <div className="landing-wrapper">
+        <motion.div variants={stragger} className="left-wrapper">
           <div className="md:mb-10 mb-4">
             <motion.h1 variants={animateIn} className="title">
               Let’s build some
@@ -58,7 +58,7 @@ const LandingSection = () => {
               <p>Recent Work&apos;s</p>
             </PrimaryButton>
           </motion.div>
-        </div>
+        </motion.div>
         <motion.div
           variants={{
             initial: { x: 200, opacity: 0 },
@@ -77,12 +77,12 @@ const LandingSection = () => {
             src="/svg/LandingArt.svg"
             alt="Landing Image"
             layout="responsive"
-            width="500px"
-            height="500px"
+            width="400px"
+            height="400px"
             className="z-10 w-full h-full object-contain"
           />
         </motion.div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 };

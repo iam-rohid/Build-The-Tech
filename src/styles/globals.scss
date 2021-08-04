@@ -20,7 +20,7 @@
         }
       }
       .right-wrapper {
-        @apply flex-1 w-full md:h-full h-40 mb-10 md:mb-0 self-center flex flex-col justify-center p-0;
+        @apply flex-1 w-full md:h-full h-40 mb-10 md:mb-0 self-center flex flex-col justify-center p-0 xl:px-20 lg:px-10 px-6;
       }
     }
   }

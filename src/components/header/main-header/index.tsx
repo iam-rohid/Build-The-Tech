@@ -36,8 +36,8 @@ const MainHeader = () => {
     <motion.nav className="nav-bar" initial="initial" animate="animate">
       <motion.div variants={stragger} className="nav-wrapper relative">
         <motion.div variants={animateIn}>
-          <Link href="/" passHref>
-            <AnimatedButton>
+          <AnimatedButton>
+            <Link href="/" passHref>
               <Image
                 src="/svg/icon.svg"
                 alt="Build The Tech icon"
@@ -45,8 +45,8 @@ const MainHeader = () => {
                 width="48px"
                 height="48px"
               />
-            </AnimatedButton>
-          </Link>
+            </Link>
+          </AnimatedButton>
         </motion.div>
         <Menu />
         <motion.div variants={animateIn}>
