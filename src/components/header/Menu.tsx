@@ -1,42 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MenuItem from "./MenuItem";
-import { useRouter } from "next/router";
 import { menu } from "../../data/navigation";
 
-const Menu = () => {
-  const [currentRoute, setCurrentRoute] = useState<string | null>(null);
-  const router = useRouter();
+interface iProps {
+  currentRoute: string;
+}
 
-  useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      const newRoute: string = url.split("/")[1];
-      if (newRoute !== null && currentRoute === newRoute) {
-        if (scrollY == 0) {
-          router.reload();
-        }
-      } else {
-        setCurrentRoute(newRoute);
-      }
-    };
+const Menu: React.FC<iProps> = ({ currentRoute }) => {
+  const getIsActive = (path: string) => {
+    if (!currentRoute) return false;
 
-    if (currentRoute === null) {
-      handleRouteChange(router.asPath);
-    }
-
-    router.events.on("routeChangeStart", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeStart", handleRouteChange);
-    };
-  }, [currentRoute, setCurrentRoute, router]);
+    const paths: string[] = path.split("/");
+    const p = paths[paths.length - 1];
+    const curPaths: string[] = currentRoute.split("/");
+    const cp = curPaths[1];
+    return p === cp;
+  };
 
   return (
     <ul className="flex flex-row items-center space-x-4">
       {menu.map((item, i) => (
-        <MenuItem
-          key={i}
-          data={item}
-          isActive={item.path.split("/")[1] === currentRoute}
-        />
+        <MenuItem key={i} data={item} isActive={getIsActive(item.path)} />
       ))}
     </ul>
   );
