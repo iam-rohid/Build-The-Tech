@@ -4,7 +4,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <meta name="theme-color" content="#8053FF" />
+        </Head>
         <body>
           <Main />
           <NextScript />

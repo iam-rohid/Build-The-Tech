@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PrimaryButton } from "../../buttons";
+import { PrimaryButton } from "../../../buttons";
 
 const easing = [0.6, -0.5, 0.01, 0.99];
 
@@ -28,14 +28,14 @@ const stragger = {
   },
 };
 
-const LandingSection = () => {
+const HeroSection = () => {
   return (
     <motion.section
-      className="landing-section"
+      className="hero-section"
       initial="initial"
       animate="animate"
     >
-      <div className="landing-wrapper">
+      <div className="hero-wrapper">
         <motion.div variants={stragger} className="left-wrapper">
           <div className="md:mb-10 mb-4">
             <motion.h1 variants={animateIn} className="title">
@@ -87,4 +87,4 @@ const LandingSection = () => {
   );
 };
 
-export default LandingSection;
+export default HeroSection;

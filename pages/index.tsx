@@ -1,6 +1,7 @@
 import React from "react";
-import LandingSection from "../src/components/home-sections/landing";
 import Head from "next/head";
+import HeroSection from "../src/components/home/sections/hero";
+
 const HomePage = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const HomePage = () => {
           content="Let’s build some Amazing Products Together!"
         />
       </Head>
-      <LandingSection />
+      <HeroSection />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import MainHeader from "../header/main-header";
-import MainFooter from "../main-footer";
+import MainFooter from "../footer/main-footer";
 
 interface iProp {
   children: JSX.Element;
@@ -11,11 +11,11 @@ const Layout: React.FC<iProp> = ({ children }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="overflow-x-hidden"
+      className="overflow-x-hidden relative h-screen overflow-y-scroll"
     >
       <MainHeader />
       <main>{children}</main>
-      {/* <MainFooter /> */}
+      <MainFooter />
     </motion.div>
   );
 };
