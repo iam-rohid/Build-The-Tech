@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import { siteName } from "../src/data/app-data";
+import { siteName } from "../../data/app-data";
 
 const ContactPage = () => {
   return (

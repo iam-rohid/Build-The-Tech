@@ -1,8 +1,7 @@
 .hero-section {
-  @apply w-full h-screen pt-24;
-  margin-top: -104px;
+  @apply w-full h-auto;
   .hero-wrapper {
-    @apply container w-full px-4 py-10 flex h-full md:space-x-8 md:flex-row justify-center flex-col-reverse;
+    @apply container w-full px-4 py-16 flex md:space-x-8 md:flex-row justify-center items-center flex-col-reverse;
     .left-wrapper {
       @apply flex-1 w-full h-full justify-center flex flex-col text-center md:text-left items-center md:items-start;
       .title {

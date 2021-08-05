@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import HeroSection from "../src/components/home/sections/hero";
-import { siteDescription, siteName } from "../src/data/app-data";
+import HeroSection from "../components/home/sections/hero";
+import { siteDescription, siteName } from "../data/app-data";
 
 const HomePage = () => {
   return (

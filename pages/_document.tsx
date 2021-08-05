@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-title-in-document-head */
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { siteName } from "../src/data/app-data";
+import { siteName } from "../data/app-data";
 
 class MyDocument extends Document {
   render() {

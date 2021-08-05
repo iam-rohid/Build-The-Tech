@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PrimaryButton } from "../../../buttons";
 
 const easing = [0.6, -0.5, 0.01, 0.99];
 
