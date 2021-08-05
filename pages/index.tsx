@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import HeroSection from "../components/home/sections/hero";
 import { siteDescription, siteName } from "../data/app-data";
+import { HeroSection, ServicesSection } from "../components/home/sections";
 
 const HomePage = () => {
   return (
@@ -11,6 +11,7 @@ const HomePage = () => {
         <meta name="description" content={siteDescription} />
       </Head>
       <HeroSection />
+      <ServicesSection />
     </>
   );
 };
